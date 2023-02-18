@@ -134,7 +134,7 @@
                                     }
                                 }
                             },
-                            "hideFilterBar": false,
+                            "hideFilterBar": true,
                             "controlConfiguration": {
                                 "@com.sap.vocabularies.UI.v1.LineItem": {
                                     "tableSettings": {
@@ -148,8 +148,8 @@
                                             "hideTableTitle": false,
                                             "showCounts": false
                                         },
-                                        "condensedTableLayout": true,
-                                        "selectionMode": "None"
+                                        "selectionMode": "None",
+                                        "selectAll": true
                                     },
                                     "columns": {
                                         "DataField::epic_nm": {
@@ -181,7 +181,7 @@
                             },
                             "content": {
                                 "header": {
-                                    "visible": true,
+                                    "visible": false,
                                     "anchorBarVisible": false
                                 }
                             },
@@ -228,7 +228,7 @@
                             "navigation": {},
                             "content": {
                                 "header": {
-                                    "visible": true
+                                    "visible": false
                                 }
                             },
                             "editableHeaderContent": false,
@@ -248,6 +248,11 @@
                                         "quickVariantSelection": {
                                             "hideTableTitle": false,
                                             "showCounts": false
+                                        }
+                                    },
+                                    "columns": {
+                                        "DataField::stories::use_cases::use_case_nm": {
+                                            "width": "7cm"
                                         }
                                     }
                                 }

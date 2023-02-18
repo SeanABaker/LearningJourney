@@ -5,7 +5,6 @@ annotate service.epic with @(
         {
             $Type : 'UI.DataField',
             Value : epic_nm,
-            Label : '{i18n>Stories}',
         },]
 );
 annotate service.epic with @(
@@ -18,6 +17,7 @@ annotate service.epic with @(
             $Type : 'UI.ReferenceFacet',
             ID : 'ListofStories',
             Target : 'stories/@UI.LineItem#ListofStories',
+            Label : 'Learning topics',
         },
     ]
 );
@@ -26,7 +26,6 @@ annotate service.stories with @(
         {
             $Type : 'UI.DataField',
             Value : story_nm,
-            Label : '{i18n>Stories}',
         },]
 );
 annotate service.epic with @(
@@ -37,7 +36,7 @@ annotate service.epic with @(
 );
 annotate service.stories with @(
     UI.HeaderInfo : {
-        TypeName : '{i18n>LearningRequirements}',
+        TypeName : '',
         TypeNamePlural : '',
     }
 );
@@ -47,6 +46,7 @@ annotate service.stories with @(
             $Type : 'UI.ReferenceFacet',
             ID : 'UseCases',
             Target : 'use_cases/@UI.LineItem#UseCases',
+            Label : 'List of Tasks',
         },
     ]
 );
@@ -55,7 +55,6 @@ annotate service.use_cases with @(
         {
             $Type : 'UI.DataField',
             Value : stories.use_cases.use_case_nm,
-            Label : '{i18n>Usecasetitle}',
         },]
 );
 
@@ -63,9 +62,9 @@ annotate service.epic with @(
     UI.HeaderFacets : [
         {
             $Type : 'UI.ReferenceFacet',
-            Label : 'LearningJourney',
             ID : 'LearningJourney',
             Target : '@UI.FieldGroup#LearningJourney',
+            Label : 'Learning topics',
         },
     ],
     UI.FieldGroup #LearningJourney : {
@@ -74,7 +73,6 @@ annotate service.epic with @(
             {
                 $Type : 'UI.DataField',
                 Value : epic_short_nm,
-                Label : 'Short Name',
             },],
     }
 );
@@ -82,7 +80,6 @@ annotate service.stories with @(
     UI.HeaderFacets : [
         {
             $Type : 'UI.ReferenceFacet',
-            Label : 'Tasks for ',
             ID : 'Tasksfor',
             Target : '@UI.FieldGroup#Tasksfor',
         },
